@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model crudelicious.Models.Dish
+<h1 class="header">Welcome to CRUDelicious</h1>
+<h2 class="title">Check out some recent dishes!</h2>
+<a class="link" href="/new">Add a Dish</a>
+@foreach(var Dish in @ViewBag.AllDishes)
+{
+    <div class="Dishinfo">
+        <a class ="dish" href="/@Dish.id">@Dish.Name</a>
+        <p class="chef">by @Dish.Chef</p>
+    </div>
+}

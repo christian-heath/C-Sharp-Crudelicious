@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model crudelicious.Models.Dish
+<a href="/">Home</a>
+<h1 class="header">@ViewBag.Dish.Name</h1>
+<h2 id="chef">Chef @ViewBag.Dish.Chef</h2>
+<p>Description: @ViewBag.Dish.Description</p>
+<p>Calories: @ViewBag.Dish.Calories</p>
+<p>Tastiness: @ViewBag.Dish.Tastiness</p>
+<a class="btn btn-danger" href="/Delete/@ViewBag.Dish.id">Delete Dish</a>
+<a class="btn btn-success" href="/Edit/@ViewBag.Dish.id">Edit Dish</a>
